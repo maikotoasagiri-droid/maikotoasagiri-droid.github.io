@@ -33,11 +33,12 @@
   <p>maiko automation tools（以下「本ツール」）は、作者本人が自分の作業を自動化するために作成した個人用ツールです。本ツールが Google アカウントの情報をどのように扱うかを以下に記載します。</p>
 
   <h2>1. 取得する情報</h2>
-  <p>本ツールは、利用者が Google の同意画面で許可した範囲に限り、以下の情報にアクセスします。</p>
+  <p>本ツールは、利用者が Google の同意画面で許可した範囲に限り、以下の情報にアクセスします。実際に使用するスコープはツールごとに異なり、そのツールが必要とするものだけを要求します。</p>
   <ul>
-    <li><strong>Gmail</strong>（<code>gmail.modify</code>）— 特定の差出人・件名に一致するメールの本文を読み取り、処理済みのメールに既読などの状態変更を行います。それ以外のメールの閲覧・送信・削除は行いません。</li>
+    <li><strong>Gmail</strong>（<code>gmail.modify</code> / <code>gmail.readonly</code>）— 特定の差出人・件名に一致するメールの本文を読み取ります。処理済みのメールに既読などの状態変更を行う場合があります（<code>gmail.modify</code> の場合）。それ以外のメールの閲覧・送信・削除は行いません。</li>
     <li><strong>Google ToDo リスト</strong>（<code>tasks</code>）— 読み取ったメールの内容からタスクを作成・更新します。</li>
     <li><strong>Google スプレッドシート</strong>（<code>spreadsheets</code>, <code>spreadsheets.readonly</code>）— 作業ログが記録された特定のスプレッドシートを読み取り、集計結果を書き込みます。</li>
+    <li><strong>Google カレンダー</strong>（<code>calendar</code>）— 予約情報を、利用者本人が作成した特定のカレンダーに登録・更新します。他のカレンダーの予定は操作しません。</li>
   </ul>
 
   <h2>2. 利用目的</h2>
