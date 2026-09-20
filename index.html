@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maiko automation tools</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --bg:#fff; --muted:#666; --line:#e0e0e0; --link:#0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --bg:#161616; --muted:#9a9a9a; --line:#333; --link:#8ab4f8; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+         line-height:1.8; }
+  main { max-width:44rem; margin:0 auto; padding:4rem 1rem; }
+  h1 { font-size:1.6rem; margin:0 0 .5rem; }
+  .lead { color:var(--muted); margin:0 0 2.5rem; }
+  h2 { font-size:1.1rem; margin:2.5rem 0 .75rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+  ul { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:var(--link); }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>maiko automation tools</h1>
+  <p class="lead">個人の作業を自動化するための、自分専用のツール群です。一般公開・配布はしていません。</p>
+
+  <h2>できること</h2>
+  <ul>
+    <li>特定の差出人からのメールを読み取り、内容に応じて Google ToDo リストにタスクを作成する</li>
+    <li>スプレッドシートに記録された作業ログを読み取り、時間を集計する</li>
+    <li>集計結果をスプレッドシートに書き戻す</li>
+  </ul>
+
+  <h2>動作環境</h2>
+  <p>作者本人の PC 上でのみ動作します。サーバーで常時稼働するサービスではなく、取得したデータが本人の PC の外に出ることはありません。</p>
+
+  <h2>プライバシー</h2>
+  <p>取り扱う情報とその範囲は <a href="privacy.html">プライバシーポリシー</a> に記載しています。</p>
+
+  <footer>
+    ソースコードは <a href="https://github.com/maikotoasagiri-droid">GitHub</a> で管理しています。
+  </footer>
+</main>
+</body>
+</html>
