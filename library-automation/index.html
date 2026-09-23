@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libraryautomation</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --bg:#fff; --muted:#666; --line:#e0e0e0; --link:#0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --bg:#161616; --muted:#9a9a9a; --line:#333; --link:#8ab4f8; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+         line-height:1.8; }
+  main { max-width:44rem; margin:0 auto; padding:4rem 1rem; }
+  h1 { font-size:1.5rem; margin:0 0 .25rem; }
+  .updated { color:var(--muted); font-size:.875rem; margin:0 0 2.5rem; }
+  h2 { font-size:1.05rem; margin:2.5rem 0 .75rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+  ul { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:var(--link); }
+  code { background:rgba(128,128,128,.14); padding:.1em .4em; border-radius:3px;
+         font-size:.9em; word-break:break-all; }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>libraryautomation</h1>
+  <p class="updated">図書館の貸出・取り置き管理を自動化する個人用ツール</p>
+
+  <p>libraryautomation は、作者本人が利用している公共図書館の貸出・予約取り置きの状況を、本人の読書管理ノート（Notion）と Google カレンダーに自動で反映するためのツールです。作者本人専用で、一般公開・配布はしていません。</p>
+
+  <h2>できること</h2>
+  <ul>
+    <li>図書館から届く「予約取置」通知メールを Gmail から読み取り、取り置かれた本のタイトルと受取期限を読書管理ノートに登録する</li>
+    <li>図書館の利用者ページから貸出中の本と返却期限を取得し、読書管理ノートを更新する</li>
+    <li>返却期限・取り置きの受取期限を本人の Google カレンダーに予定として登録・更新する</li>
+    <li>返却期限が近い本の貸出延長を申請する</li>
+  </ul>
+
+  <h2>Google アカウントで利用する機能</h2>
+  <ul>
+    <li><strong>Gmail（読み取り専用）</strong> — 図書館の通知メール（差出人・件名で限定）の本文だけを読み取ります。メールの送信・変更・削除はしません。</li>
+    <li><strong>Google カレンダー</strong> — 図書館の返却期限・受取期限の予定を作成・更新します。</li>
+  </ul>
+
+  <h2>動作環境</h2>
+  <p>作者本人の PC 上でのみ動作します。サーバーで常時稼働するサービスではありません。</p>
+
+  <h2>プライバシー</h2>
+  <p>取り扱う情報とその範囲は <a href="privacy.html">プライバシーポリシー</a> に記載しています。</p>
+
+  <footer>
+    運営: <a href="https://github.com/maikotoasagiri-droid" rel="noopener">maikotoasagiri-droid</a>
+  </footer>
+</main>
+</body>
+</html>

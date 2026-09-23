@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | libraryautomation</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --bg:#fff; --muted:#666; --line:#e0e0e0; --link:#0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --bg:#161616; --muted:#9a9a9a; --line:#333; --link:#8ab4f8; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+         line-height:1.8; }
+  main { max-width:44rem; margin:0 auto; padding:4rem 1rem; }
+  h1 { font-size:1.5rem; margin:0 0 .25rem; }
+  .updated { color:var(--muted); font-size:.875rem; margin:0 0 2.5rem; }
+  h2 { font-size:1.05rem; margin:2.5rem 0 .75rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+  ul { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:var(--link); }
+  code { background:rgba(128,128,128,.14); padding:.1em .4em; border-radius:3px;
+         font-size:.9em; word-break:break-all; }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">libraryautomation ／ 最終更新日: 2026年9月23日</p>
+
+  <p>libraryautomation（以下「本ツール」）は、作者本人が図書館の貸出・取り置き管理を自動化するために作成した個人用ツールです。本ツールが Google アカウントの情報をどのように扱うかを以下に記載します。</p>
+
+  <h2>1. 取得する情報</h2>
+  <ul>
+    <li><strong>Gmail</strong>（<code>https://www.googleapis.com/auth/gmail.readonly</code>）— 図書館システムの差出人から届いた、件名に「予約取置」を含むメールだけを検索し、その本文から本のタイトル・受取期限を読み取ります。それ以外のメールの内容は処理しません。メールの送信・変更・削除は行いません。</li>
+    <li><strong>Google カレンダー</strong>（<code>https://www.googleapis.com/auth/calendar</code>）— 「【図書館返却】」「【図書館取置】」などの名前で、本ツールが作成した予定の登録・更新・重複確認を行います。本ツールが作成していない予定の変更・削除は行いません。</li>
+  </ul>
+
+  <h2>2. 利用目的</h2>
+  <p>取得した情報は、利用者本人の図書館の貸出・取り置き状況を読書管理ノートとカレンダーに反映する目的にのみ使用します。他の目的には一切使用しません。</p>
+
+  <h2>3. 情報の保存場所と送信先</h2>
+  <ul>
+    <li>本ツールは作者本人の PC 上でのみ動作します。認証トークンはその PC のローカルファイルとして保存します。</li>
+    <li>メールから読み取った本のタイトル・受取期限は、利用者本人の Notion ワークスペース（本人の読書管理データベース）に書き込みます。これは本人が利用する機能を提供するためだけの送信です。</li>
+    <li>メール本文そのもの、およびそれ以外の Google ユーザーデータを外部のサーバーに送信・保管することはありません。</li>
+  </ul>
+
+  <h2>4. 第三者への提供</h2>
+  <p>取得した情報を第三者に提供・販売・譲渡することはありません。広告配信、信用評価、AI・機械学習モデルの学習に使用することもありません。</p>
+
+  <h2>5. Google ユーザーデータの制限付き使用</h2>
+  <p>本ツールによる Google API から取得した情報の使用および他アプリへの移行は、<a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API サービスのユーザーデータに関するポリシー</a>（制限付き使用の要件を含む）に準拠します。</p>
+
+  <h2>6. データの削除とアクセス権の取り消し</h2>
+  <p>本ツールに与えたアクセス権は、Google アカウントの <a href="https://myaccount.google.com/permissions" rel="noopener">サードパーティ アプリとサービス</a> の設定からいつでも取り消せます。取り消した時点で、本ツールは一切の情報にアクセスできなくなります。PC 上の認証トークンは削除することで無効にできます。</p>
+
+  <h2>7. お問い合わせ</h2>
+  <p>本ポリシーに関するお問い合わせは、<a href="https://github.com/maikotoasagiri-droid" rel="noopener">GitHub</a> からお願いします。</p>
+
+  <footer>
+    <a href="./">libraryautomation トップに戻る</a>
+  </footer>
+</main>
+</body>
+</html>
