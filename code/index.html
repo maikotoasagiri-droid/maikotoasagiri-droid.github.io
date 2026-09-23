@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>VS Codeで開く</title>
+<!--
+  Relay for the maikocode:// scheme.
+  Browser Notion drops links with non-http schemes, so the Projects DB formula
+  points here as https://.../code/#<folder under C:\Dev> and this page hands
+  the path on to maikocode://, which opens it in VS Code (tools/open_in_vscode.vbs).
+  The path lives in the fragment so it is never sent to the server.
+-->
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --bg:#fff; --muted:#666; --link:#0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --bg:#161616; --muted:#9a9a9a; --link:#8ab4f8; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif; }
+  main { max-width:32rem; margin:0 auto; padding:4rem 1rem; }
+  code { word-break:break-all; }
+  a.btn { display:inline-block; margin-top:1rem; padding:.5rem 1rem; border:1px solid var(--link);
+          border-radius:6px; color:var(--link); text-decoration:none; }
+  .muted { color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <p id="msg">VS Codeを開いています…</p>
+  <p><code id="path"></code></p>
+  <a id="btn" class="btn" href="#" hidden>もう一度開く</a>
+  <p class="muted">開いたらこのタブは閉じてかまいません。</p>
+</main>
+<script>
+  var rel = decodeURIComponent(location.hash.slice(1)).replace(/\\/g, "/");
+  var ok = rel.length > 0 && rel.indexOf("..") < 0 && rel.indexOf(":") < 0;
+  var msg = document.getElementById("msg");
+  if (!ok) {
+    msg.textContent = "フォルダが指定されていないか、不正なパスです。";
+  } else {
+    var target = "maikocode://" + rel.split("/").map(encodeURIComponent).join("/");
+    document.getElementById("path").textContent = "C:\\Dev\\" + rel.replace(/\//g, "\\");
+    var btn = document.getElementById("btn");
+    btn.href = target;
+    btn.hidden = false;
+    location.href = target;
+  }
+</script>
+</body>
+</html>
